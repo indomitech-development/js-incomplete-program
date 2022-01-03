@@ -129,17 +129,25 @@ function program2(){
     }
 
     }
-//   function program13(){
-//     var a=[1,2,3,4,2,3,4,5];
-//     var counts=[];
-//     a.forEach((x)=>{
-//         counts[x] = (counts[x] || 0) +1 ;
-//     });
-//     console.log(counts)
-//     document.getElementById("start13").innerHTML="count duplicate element:"+counts+"<br>";
+  function program13(){
+    var a=[1,2,3,4,2,3,4,5];
+    var counts=[];
+    a.forEach((x)=>{
+        counts[x] = (counts[x] || 0) +1 ;
+    });
+    console.log(counts)
+    document.getElementById("start13").innerHTML="count duplicate element:"+counts+"<br>";
     
-// }
+}
     
+
+function program14(){
+    const array = [1, 2, 3, 2, 3];
+    let array2 = [...new Set(array)];
+
+    console.log(array2);
+    document.getElementById("program14").innerHTML+=array2
+}
     function program15(){
         var a1=[1,2,3,4]
         document.getElementById("first").innerHTML+=a1;
@@ -202,6 +210,15 @@ function program2(){
         
     }
 }
+ 
+function program19(){
+    var array=[2,3,5,8,6,4,1,9,7];
+    document.getElementById("oldarray").innerHTML=array;
+    var array2=array.sort((a,b)=>a-b);
+    console.log(array2);
+    document.getElementById("newarray").innerHTML=array2;
+}
+
 function program20(){
 var y=[1,2,3,4,5,6,7,8,9,10]
 y.forEach((x)=>{
@@ -212,22 +229,203 @@ y.forEach((x)=>{
 });
 }
 
+var arr=[1,2,3,4,5,6,7]
 function program23()
 {
-var userInput = document.getElementById("num1").value;
+var userInput = new Date().getDay()
 var f=document.getElementById("program23");
 switch (userInput) {
+    case 1:
+        f.innerHTML="Monday";
+        break;
+        case 2:
+        f.innerHTML="Tuesday";
+        break;
+        case 3:
+            f.innerHTML="Wednesday";
+            break;
+            case 4:
+                f.innerHTML="Thursday";
+                break;
+                case 5:
+                    f.innerHTML="Friday";
+                    break;
+                    case 6:
+                        f.innerHTML="Saturday";
+                        break;
+                        case 7:
+                        f.innerHTML="Sunday";
+                        break;
+        
 
-case (userInput==1):
-document.write("mOnday")
-break;
-
-case (userInput==2):
-document.write("Tuesday")
-break;
-
-// default:
-// f.innerHTML="Invalid Value";
-// break;
+    default:
+        f.innerHTML="Invalid Number"
+        break;
 }
+}
+function program24(){
+var day=new Date().getMonth();
+var d=document.getElementById("program24")
+switch (day) {
+    case 0:
+        d.innerHTML="Number of days in january 31"
+        break;
+        case 1:
+        d.innerHTML="Number of days in 	February 28"
+        break;
+        case 2:
+        d.innerHTML="Number of days in March 31"
+        break;
+        case 3:
+        d.innerHTML="Number of days in April 30"
+        break;
+        case 4:
+        d.innerHTML="Number of days in May 31"
+        break;
+        case 5:
+        d.innerHTML="Number of days in june 30"
+        break;
+        case 6:
+        d.innerHTML="Number of days in july 31"
+        break;
+        case 7:
+        d.innerHTML="Number of days in August 31"
+        break;
+        case 8:
+        d.innerHTML="Number of days in September 30"
+        break;
+        case 9:
+        d.innerHTML="Number of days in October 31"
+        break;
+        case 10:
+        d.innerHTML="Number of days in November 30"
+        break;
+        case 11:
+        d.innerHTML="Number of days in December 31"
+        break;
+
+    default:
+        break;
+}
+}
+
+function program25(){
+    var alpha=document.getElementById("alphabet").value
+    console.log(alpha);
+   
+    var pro=document.getElementById("program25")
+    switch (alpha) {
+        case 'a': case 'e': case 'i': case 'o': case 'u':
+             pro.innerHTML="alphabet is vowel"
+            break;
+    
+        default:
+            pro.innerHTML="alphabet is consnent";
+            break;
+    }
+}
+
+function program26(){
+    let num1 = prompt("enter your first number")
+    let num2 = prompt("enter your second number")
+    var great=document.getElementById('program26')
+    
+    switch (num1>num2) {
+        case false:
+          great.innerHTML="num2 is greater than num1";
+          break;
+        case true:
+         great.innerHTML="num1 is greater than num2";
+         break;
+        }
+}
+
+function program27(){
+    let even=prompt("enter your number");
+    var pro=document.getElementById("program27")
+    switch (even%2==0) {
+        case true:
+            pro.innerHTML="number is even";
+            break;
+            case false:
+           pro.innerHTML="number is odd";
+            break;
+    }
+}
+
+function program28(){
+    let number=prompt("enter your number");
+    var h=document.getElementById("program28")
+    switch (number>=0) {
+        case true:
+            h.innerHTML="number is positive"
+            break;
+            case false:
+                h.innerHTML="number is negative";
+                 break;
+    }
+}
+
+function quad(){
+    console.log("2x² - 5x + 3 = 0");
+    var a=2;
+    var b=-5;
+    var c=3;
+  var pro1=document.getElementById("root1")
+  var pro2=document.getElementById("root2")
+    var d=b*b-4*a*c;
+    console.log(d);
+   switch (d>0) {
+       case true:
+           var root1=(-b + Math.sqrt(d)) / (2 * a);
+           console.log(root1);
+           pro1.innerHTML="root1 is"+root1;
+           var root2=(-b - Math.sqrt(d)) / (2 * a);
+           console.log(root2);
+           pro2.innerHTML="root2 is"+ root2;
+           break;
+   
+       case false:
+           var root1=(-b)/2*a;
+           var root2=(-b)/2*a;
+           console.log(root1);
+           pro1.innerHTML="root1 is"+ root1;
+           console.log(root2);
+           pro2.innerHTML="root2 is"+ root2;
+
+   }
+}
+
+function program30(){
+    var a=parseInt(prompt("enter your first value"));
+    var b=parseInt(prompt("enter your second value"));
+    var operator=prompt("enter your operator");
+   var program=document.getElementById("program30")
+    switch (operator) {
+        case '+':
+           var result=a+b;
+              program.innerHTML=result;
+            break;
+            case '-':
+                var result=a-b;
+              program.innerHTML=result;
+                break;
+                case '*':
+                    var result=a*b;
+              program.innerHTML=result;
+                    break;
+                    case '/':
+                        var result=a/b;
+              program.innerHTML=result;
+                        break;
+                        case '%':
+                            var result=a%b;
+                            program.innerHTML=result;
+                            break;
+    
+        default:
+            break;
+    }
+
+    
 }
